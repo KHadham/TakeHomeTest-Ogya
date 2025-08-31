@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		2858490A3E7F692C08EA277A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 801C47673ADEDFBBD46FCF03 /* PrivacyInfo.xcprivacy */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
-		894289B81748A58D5C963617 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = EBC474DB20F6CB447A378824 /* PrivacyInfo.xcprivacy */; };
-		94521576F27B09D19042DBAE /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EEA8424248D94868A16962 /* ExpoModulesProvider.swift */; };
+		56B5FEDCB53851093CF8EBBC /* libPods-TestOgya.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE68000710F1B4A765BCDCDB /* libPods-TestOgya.a */; };
+		B18648F1F2CBC7D0D1204DD4 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4294883662EC93210570D6 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		D38BCE7CA1C17E9759CC2314 /* libPods-TestOgya.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B84E80C3FF4D9A3E8B2CD8FC /* libPods-TestOgya.a */; };
 		F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11748412D0307B40044C1D9 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -20,16 +20,16 @@
 		13B07F961A680F5B00A75B9A /* TestOgya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestOgya.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TestOgya/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TestOgya/Info.plist; sourceTree = "<group>"; };
-		3C81484BD8831B8A93091DE1 /* Pods-TestOgya.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestOgya.debug.xcconfig"; path = "Target Support Files/Pods-TestOgya/Pods-TestOgya.debug.xcconfig"; sourceTree = "<group>"; };
+		4DA6F879E8AC9D41C783AFBE /* Pods-TestOgya.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestOgya.debug.xcconfig"; path = "Target Support Files/Pods-TestOgya/Pods-TestOgya.debug.xcconfig"; sourceTree = "<group>"; };
+		801C47673ADEDFBBD46FCF03 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = TestOgya/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = TestOgya/SplashScreen.storyboard; sourceTree = "<group>"; };
-		B84E80C3FF4D9A3E8B2CD8FC /* libPods-TestOgya.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestOgya.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
-		EBC474DB20F6CB447A378824 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = TestOgya/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		C19D01B07EDD2EB50E688ABC /* Pods-TestOgya.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestOgya.release.xcconfig"; path = "Target Support Files/Pods-TestOgya/Pods-TestOgya.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F0E30536CD9D6C9AC512A003 /* Pods-TestOgya.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestOgya.release.xcconfig"; path = "Target Support Files/Pods-TestOgya/Pods-TestOgya.release.xcconfig"; sourceTree = "<group>"; };
+		EE68000710F1B4A765BCDCDB /* libPods-TestOgya.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestOgya.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4294883662EC93210570D6 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-TestOgya/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		F11748412D0307B40044C1D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = TestOgya/AppDelegate.swift; sourceTree = "<group>"; };
 		F11748442D0722820044C1D9 /* TestOgya-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "TestOgya-Bridging-Header.h"; path = "TestOgya/TestOgya-Bridging-Header.h"; sourceTree = "<group>"; };
-		F6EEA8424248D94868A16962 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-TestOgya/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D38BCE7CA1C17E9759CC2314 /* libPods-TestOgya.a in Frameworks */,
+				56B5FEDCB53851093CF8EBBC /* libPods-TestOgya.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,26 +53,36 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				EBC474DB20F6CB447A378824 /* PrivacyInfo.xcprivacy */,
+				801C47673ADEDFBBD46FCF03 /* PrivacyInfo.xcprivacy */,
 			);
 			name = TestOgya;
-			sourceTree = "<group>";
-		};
-		1DBCA40AF5E7A1A37AE4C69B /* ExpoModulesProviders */ = {
-			isa = PBXGroup;
-			children = (
-				CB2BD85DF4B991A4A686BBFF /* TestOgya */,
-			);
-			name = ExpoModulesProviders;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				B84E80C3FF4D9A3E8B2CD8FC /* libPods-TestOgya.a */,
+				EE68000710F1B4A765BCDCDB /* libPods-TestOgya.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48072E4FB1EAF74DA2626405 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DA6F879E8AC9D41C783AFBE /* Pods-TestOgya.debug.xcconfig */,
+				C19D01B07EDD2EB50E688ABC /* Pods-TestOgya.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		701E8AB553096845AA8ACFC3 /* TestOgya */ = {
+			isa = PBXGroup;
+			children = (
+				EF4294883662EC93210570D6 /* ExpoModulesProvider.swift */,
+			);
+			name = TestOgya;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -89,8 +99,8 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				9DF94846CBED3BB86697BE0F /* Pods */,
-				1DBCA40AF5E7A1A37AE4C69B /* ExpoModulesProviders */,
+				48072E4FB1EAF74DA2626405 /* Pods */,
+				B6CB261FFCB29F00BEE4E6CE /* ExpoModulesProviders */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -105,14 +115,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9DF94846CBED3BB86697BE0F /* Pods */ = {
+		B6CB261FFCB29F00BEE4E6CE /* ExpoModulesProviders */ = {
 			isa = PBXGroup;
 			children = (
-				3C81484BD8831B8A93091DE1 /* Pods-TestOgya.debug.xcconfig */,
-				F0E30536CD9D6C9AC512A003 /* Pods-TestOgya.release.xcconfig */,
+				701E8AB553096845AA8ACFC3 /* TestOgya */,
 			);
-			name = Pods;
-			path = Pods;
+			name = ExpoModulesProviders;
 			sourceTree = "<group>";
 		};
 		BB2F792B24A3F905000567C9 /* Supporting */ = {
@@ -124,14 +132,6 @@
 			path = TestOgya/Supporting;
 			sourceTree = "<group>";
 		};
-		CB2BD85DF4B991A4A686BBFF /* TestOgya */ = {
-			isa = PBXGroup;
-			children = (
-				F6EEA8424248D94868A16962 /* ExpoModulesProvider.swift */,
-			);
-			name = TestOgya;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,13 +140,13 @@
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TestOgya" */;
 			buildPhases = (
 				08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */,
-				EA8784F64D07EE3554969622 /* [Expo] Configure project */,
+				0441B0AF159D8132DD9B2D32 /* [Expo] Configure project */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
-				BE21123A0D809E4ADBA9DFB6 /* [CP] Embed Pods Frameworks */,
+				254354795879A721B340BEE7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,7 +196,7 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				894289B81748A58D5C963617 /* PrivacyInfo.xcprivacy in Resources */,
+				2858490A3E7F692C08EA277A /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +218,25 @@
 			shellPath = /bin/sh;
 			shellScript = "if [[ -f \"$PODS_ROOT/../.xcode.env\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env\"\nfi\nif [[ -f \"$PODS_ROOT/../.xcode.env.local\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env.local\"\nfi\n\n# The project root by default is one level up from the ios directory\nexport PROJECT_ROOT=\"$PROJECT_DIR\"/..\n\nif [[ \"$CONFIGURATION\" = *Debug* ]]; then\n  export SKIP_BUNDLING=1\nfi\nif [[ -z \"$ENTRY_FILE\" ]]; then\n  # Set the entry JS file using the bundler's entry resolution.\n  export ENTRY_FILE=\"$(\"$NODE_BINARY\" -e \"require('expo/scripts/resolveAppEntry')\" \"$PROJECT_ROOT\" ios absolute | tail -n 1)\"\nfi\n\nif [[ -z \"$CLI_PATH\" ]]; then\n  # Use Expo CLI\n  export CLI_PATH=\"$(\"$NODE_BINARY\" --print \"require.resolve('@expo/cli', { paths: [require.resolve('expo/package.json')] })\")\"\nfi\nif [[ -z \"$BUNDLE_COMMAND\" ]]; then\n  # Default Expo CLI command for bundling\n  export BUNDLE_COMMAND=\"export:embed\"\nfi\n\n# Source .xcode.env.updates if it exists to allow\n# SKIP_BUNDLING to be unset if needed\nif [[ -f \"$PODS_ROOT/../.xcode.env.updates\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env.updates\"\nfi\n# Source local changes to allow overrides\n# if needed\nif [[ -f \"$PODS_ROOT/../.xcode.env.local\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env.local\"\nfi\n\n`\"$NODE_BINARY\" --print \"require('path').dirname(require.resolve('react-native/package.json')) + '/scripts/react-native-xcode.sh'\"`\n\n";
 		};
+		0441B0AF159D8132DD9B2D32 /* [Expo] Configure project */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Expo] Configure project";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-TestOgya/expo-configure-project.sh\"\n";
+		};
 		08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -238,6 +257,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		254354795879A721B340BEE7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestOgya/Pods-TestOgya-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestOgya/Pods-TestOgya-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */ = {
@@ -274,43 +311,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestOgya/Pods-TestOgya-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BE21123A0D809E4ADBA9DFB6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestOgya/Pods-TestOgya-frameworks.sh",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestOgya/Pods-TestOgya-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EA8784F64D07EE3554969622 /* [Expo] Configure project */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[Expo] Configure project";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-TestOgya/expo-configure-project.sh\"\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -319,7 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */,
-				94521576F27B09D19042DBAE /* ExpoModulesProvider.swift in Sources */,
+				B18648F1F2CBC7D0D1204DD4 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +328,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C81484BD8831B8A93091DE1 /* Pods-TestOgya.debug.xcconfig */;
+			baseConfigurationReference = 4DA6F879E8AC9D41C783AFBE /* Pods-TestOgya.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -364,7 +364,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0E30536CD9D6C9AC512A003 /* Pods-TestOgya.release.xcconfig */;
+			baseConfigurationReference = C19D01B07EDD2EB50E688ABC /* Pods-TestOgya.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
