@@ -31,6 +31,7 @@ export default function OwnProfileScreen() {
   }, []);
 
   const handlePickImage = async () => {
+    
     const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
     if (status !== "granted") {
       Alert.alert(
