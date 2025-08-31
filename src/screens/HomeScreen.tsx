@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   View,
   FlatList,
@@ -7,68 +7,72 @@ import {
   ActivityIndicator,
   StyleSheet,
   TouchableOpacity,
+  Button,
 } from "react-native";
-import {
-  getPublicRepositories,
-  searchPublicRepositories,
-} from "../api/githubAPI";
+import { Link, useLocalSearchParams } from "expo-router";
 import { Repo } from "../types/github";
-import { Link } from "expo-router";
+import {
+  useGetPublicRepositoriesQuery,
+  useSearchRepositoriesQuery,
+} from "../store/slices/githubSlice";
+
+// Custom hook for debouncing
+const useDebounce = (value: string, delay: number) => {
+  const [debouncedValue, setDebouncedValue] = useState(value);
+  useEffect(() => {
+    const handler = setTimeout(() => setDebouncedValue(value), delay);
+    return () => clearTimeout(handler);
+  }, [value, delay]);
+  return debouncedValue;
+};
 
 export default function HomeScreen() {
-  const [repos, setRepos] = useState<Repo[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [since, setSince] = useState<number>(0); // For pagination
-  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [since, setSince] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [sortOrder, setSortOrder] = useState<"asc" | "desc" | null>(null);
 
-  // Effect for handling debounced search
+  const debouncedSearchQuery = useDebounce(searchQuery, 500);
+  const params = useLocalSearchParams<{ sortBy?: "asc" | "desc" }>();
+
+  // RTK Query hook for the initial list and infinite scroll
+  const {
+    data: repoList,
+    isLoading: isListLoading,
+    isFetching: isListFetching,
+  } = useGetPublicRepositoriesQuery(since);
+
+  // RTK Query hook for search. It will only run when the query is long enough.
+  const { data: searchResults, isLoading: isSearchLoading } =
+    useSearchRepositoriesQuery(debouncedSearchQuery, {
+      skip: debouncedSearchQuery.length < 3,
+    });
+
   useEffect(() => {
-    const handler = setTimeout(async () => {
-      if (searchQuery.length > 2) {
-        setIsLoading(true);
-        const searchResults = await searchPublicRepositories(searchQuery);
-        setRepos(searchResults);
-        setIsLoading(false);
-      } else if (searchQuery.length === 0) {
-        // If search is cleared, fetch the initial list again
-        fetchInitialRepos();
-      }
-    }, 500); // 500ms debounce delay
-
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [searchQuery]);
-
-  // Function to fetch the very first page of repositories
-  const fetchInitialRepos = async () => {
-    setIsLoading(true);
-    const initialRepos = await getPublicRepositories(0);
-    setRepos(initialRepos);
-    if (initialRepos.length > 0) {
-      setSince(initialRepos[initialRepos.length - 1].id);
+    if (params.sortBy === "asc" || params.sortBy === "desc") {
+      setSortOrder(params.sortBy);
     }
-    setIsLoading(false);
+  }, [params.sortBy]);
+
+  const handleLoadMore = () => {
+    if (isListFetching || debouncedSearchQuery) return;
+    // To fetch the next page, we just need to update the `since` parameter
+    if (repoList && repoList.length > 0) {
+      setSince(repoList[repoList.length - 1].id);
+    }
   };
 
-  // Initial data load on component mount
-  useEffect(() => {
-    fetchInitialRepos();
-  }, []);
+  // Determine which data to display and handle loading states
+  const isLoading = isListLoading || isSearchLoading;
+  const repos = debouncedSearchQuery.length > 2 ? searchResults : repoList;
 
-  // Function for infinite scroll
-  const handleLoadMore = useCallback(async () => {
-    // Don't fetch more if we are already loading or if a search is active
-    if (isLoading || searchQuery) return;
-
-    setIsLoading(true);
-    const newRepos = await getPublicRepositories(since);
-    if (newRepos.length > 0) {
-      setRepos((prevRepos) => [...prevRepos, ...newRepos]);
-      setSince(newRepos[newRepos.length - 1].id);
-    }
-    setIsLoading(false);
-  }, [isLoading, since, searchQuery]);
+  // Memoized sorting logic remains the same
+  const sortedRepos = useMemo(() => {
+    if (!sortOrder || !repos) return repos || [];
+    return [...repos].sort((a, b) => {
+      if (sortOrder === "asc") return a.name.localeCompare(b.name);
+      return b.name.localeCompare(a.name);
+    });
+  }, [repos, sortOrder]);
 
   const renderItem = ({ item }: { item: Repo }) => (
     <Link href={`/user/${item.owner.login}`} asChild>
@@ -87,17 +91,22 @@ export default function HomeScreen() {
         value={searchQuery}
         onChangeText={setSearchQuery}
       />
+      <Link href="/modal" asChild>
+        <Button title="Sort & Filter" />
+      </Link>
       <FlatList
-        data={repos}
+        data={sortedRepos}
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
         onEndReached={handleLoadMore}
         onEndReachedThreshold={0.5}
         ListFooterComponent={
-          isLoading ? <ActivityIndicator size="large" /> : null
+          isLoading ? (
+            <ActivityIndicator size="large" testID="activity-indicator" />
+          ) : null
         }
         ListEmptyComponent={
-          !isLoading ? (
+          !isLoading && repos && repos.length === 0 ? (
             <View style={styles.centeredMessage}>
               <Text>No Data Found</Text>
             </View>
